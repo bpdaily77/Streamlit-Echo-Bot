@@ -8,4 +8,7 @@ with st.chat_message("assistant", avatar="🤖"):
 
 prompt = st.chat_input("Say something")
 if prompt:
-    st.write(f"User has sent the following prompt: {prompt}")
+    with st.chat_message("user", avatar="🧑"):
+    # Displays the name in a small, muted font right inside the bubble
+    st.caption("**Human**") 
+    st.write(prompt)
