@@ -24,13 +24,13 @@ def ai_ask(prompt, data=None, temperature=0.5, max_tokens=250, model="mistral-sm
                 message += f"\n\nData to analyze:\n{data_str}"
         
         # Prepare the API request payload
-            payload = {
+        payload = {
                 "messages": [{"role": "user", "content": message}],
                 "temperature": float(temperature),
                 "model": model,
                 "max_tokens": int(max_tokens)
             }
-            headers = {
+        headers = {
                 "Authorization": f"Bearer {api_key}",
                 "Content-Type": "application/json",
                 "Accept": "application/json"
