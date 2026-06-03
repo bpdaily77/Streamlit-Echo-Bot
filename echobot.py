@@ -28,7 +28,7 @@ if prompt := st.chat_input("What is up?"):
     response = f"Echo: {prompt}"
     # Display assistant response in chat message container
     
-    with st.chat_message("assistant", avatar="🤖):
+    with st.chat_message("assistant", avatar="🤖"):
         st.markdown(response)
         st.caption("**Skynet**") 
     # Add assistant response to chat history
